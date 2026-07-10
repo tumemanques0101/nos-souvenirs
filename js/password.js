@@ -107,7 +107,15 @@
 }
 
         clearPasswordError();
-        elements.unlockForm.classList.add("Có lẽ một giai điệu quen thuộc sẽ giúp em nhớ ra");
+        clearPasswordError();
+
+// Giữ hiệu ứng mở khóa
+elements.unlockForm.classList.add("is-unlocking");
+
+window.setTimeout(() => {
+  elements.passwordInput.value = "";
+  onUnlock();
+}, 620);
         window.setTimeout(() => {
           elements.passwordInput.value = "";
           onUnlock();
