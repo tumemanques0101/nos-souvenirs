@@ -221,12 +221,12 @@
 
   .bow {
     top: 49px;
-    transform: translateX(-46%) scale(0.74);
+    transform: translateX(-50%) scale(0.74);
   }
 
   .wax-seal {
     top: 56px;
-    transform: translateX(-46%) scale(0.74);
+    transform: translateX(-50%) scale(0.74);
   }
 
   .countdown-grid span {
