@@ -71,10 +71,22 @@
         const value = normalizePasscode(elements.passwordInput.value);
         const allowed = settings.passcodes.map(normalizePasscode);
 
-        if (settings.enforceOpenTime && Date.now() < openTargetTime) {
-          showPasswordError("Có những điều chỉ nên được đọc vào đúng thời điểm.");
-          return;
-        }
+       if (settings.enforceOpenTime && Date.now() < openTargetTime) {
+  const messages = [
+    "Có những lời muốn nói... chỉ nên được đọc vào đúng ngày đã hẹn.",
+    "Bức thư này vẫn đang chờ đến đúng thời khắc.",
+    "Có lẽ hôm nay vẫn chưa phải là ngày mở lại những ký ức này.",
+    "Hãy để thời gian mở bức thư này thay anh.",
+    "Bức thư vẫn đang đếm ngược đến ngày dành riêng cho em.",
+    "Xin hãy quay lại khi thời gian đã đến nhé."
+  ];
+
+  showPasswordError(
+    messages[Math.floor(Math.random() * messages.length)]
+  );
+
+  return;
+}
 
         if (!allowed.includes(value)) {
   const messages = [
