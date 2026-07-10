@@ -62,6 +62,12 @@
 
       function handlePasswordSubmit(event) {
         event.preventDefault();
+        console.log({
+    enforce: settings.enforceOpenTime,
+    now: new Date(),
+    target: new Date(openTargetTime),
+    remaining: openTargetTime - Date.now()
+});
         const value = normalizePasscode(elements.passwordInput.value);
         const allowed = settings.passcodes.map(normalizePasscode);
 
