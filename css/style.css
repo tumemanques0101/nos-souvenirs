@@ -2404,7 +2404,7 @@ h2 {
     width:104px;
     height:auto;
 
-    left:calc(50% + 4px);
+    left:50%;
 
     top:67px;
   }
