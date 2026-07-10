@@ -36,7 +36,7 @@
 
       <section class="lock-screen" id="lockScreen" aria-labelledby="lockTitle">
         <p class="eyebrow">Une Lettre</p>
-        <h1 id="lockTitle">You have received a letter.</h1>
+        <h1 id="lockTitle">Gửi tới em lá thư.</h1>
 
         <div class="envelope-stage" id="envelopeStage" aria-hidden="true">
           <div class="envelope" id="envelope">
@@ -52,8 +52,8 @@
             <div class="envelope-body">
               <div class="paper-grain"></div>
               <div class="envelope-address" aria-hidden="true">
-                <span>For</span>
-                <strong>You</strong>
+                <span>Dành cho</span>
+                <strong>Em</strong>
               </div>
               <span class="envelope-stamp" aria-hidden="true">UL</span>
             </div>
@@ -78,16 +78,16 @@
           </div>
         </div>
 
-        <p class="lock-note" id="lockNote">This letter is waiting for you.</p>
+        <p class="lock-note" id="lockNote">Lá thư này đang chờ em.</p>
 
-        <button class="primary-button open-request" id="openRequest" type="button">Open</button>
+        <button class="primary-button open-request" id="openRequest" type="button">Mở thư</button>
 
         <form class="unlock-form" id="unlockForm" novalidate hidden aria-hidden="true">
           <div class="password-topline">
-            <button class="hint-button" id="hintButton" type="button">Hint</button>
-            <span class="hint-popover" id="hintPopover" role="status">The password is the name of this letter, without spaces.</span>
+            <button class="hint-button" id="hintButton" type="button">Gợi ý</button>
+            <span class="hint-popover" id="hintPopover" role="status">Mật khẩu là bài hát em để ghi chú ngày mà mình thành đôi.</span>
           </div>
-          <label for="passwordInput">Password</label>
+          <label for="passwordInput">Mật khẩu</label>
           <div class="unlock-row">
             <input
               id="passwordInput"
@@ -98,7 +98,7 @@
               aria-describedby="passwordError"
               required
             />
-            <button class="primary-button" type="submit">Unlock</button>
+            <button class="primary-button" type="submit">Mở khóa</button>
           </div>
           <p class="error-message" id="passwordError" role="status"></p>
         </form>
@@ -116,14 +116,13 @@
 
           <header class="letter-header">
             <p class="eyebrow">Une Lettre</p>
-            <h2 id="letterTitle">For you</h2>
+            <h2 id="letterTitle">Gửi </h2>
           </header>
 
           <div class="letter-content" id="letterContent" tabindex="-1"></div>
 
           <footer class="letter-footer" id="letterFooter" hidden>
-            <p>Thank you for reading.</p>
-            <button class="secondary-button" id="openMemoriesButton" type="button" disabled>Next</button>
+            <button class="secondary-button" id="openMemoriesButton" type="button" disabled>Tiếp </button>
             <div class="tiny-heart" aria-hidden="true"></div>
           </footer>
         </article>
@@ -134,7 +133,7 @@
           <button class="gallery-back-button" id="backToLetterButton" type="button" aria-label="Back to letter" data-tooltip="Back to letter">&#8592;</button>
           <header class="memory-album-header">
             <p class="eyebrow">Nos Souvenirs</p>
-            <h2 id="galleryTitle">Little memories</h2>
+            <h2 id="galleryTitle">Những kỉ niệm của hai ta</h2>
           </header>
           <div class="memory-grid" id="memoryGrid" aria-live="polite"></div>
           <div class="memory-navigation" aria-label="Memory navigation">
@@ -154,7 +153,7 @@
             Some things are quiet because they are small. Some things are quiet
             because they matter.
           </p>
-          <small>Tap anywhere to fold this letter away.</small>
+          <small>Ấn bất kì đâu để tiếp </small>
         </article>
       </section>
 
@@ -178,7 +177,7 @@
               </div>
             </div>
           </div>
-          <h2 id="thanksMessage">Thank you for reading.</h2>
+          <h2 id="thanksMessage">Cảm ơn em vì đã đọc lá thư của anh.</h2>
         </div>
       </section>
     </main>
