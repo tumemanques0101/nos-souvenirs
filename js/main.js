@@ -8,7 +8,7 @@
     passcodes: ["perfect"],
     openAt: "",
     demoOpenMinutesFromNow: 12,
-    enforceOpenTime: true,
+    enforceOpenTime: false,
     paragraphs: [
       "Dear you,",
       "I wanted this to feel less like opening a page and more like opening something that had been waiting quietly.",
