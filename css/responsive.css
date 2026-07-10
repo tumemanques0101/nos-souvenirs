@@ -56,8 +56,12 @@
   }
 
   .wax-seal {
-    top: 66px;
+    top: 50px;
     transform: translateX(-50%) scale(0.86);
+  }
+
+  .envelope-stamp {
+    display: none;
   }
 
   .unlock-row {
@@ -225,7 +229,7 @@
   }
 
   .wax-seal {
-    top: 56px;
+    top: 38px;
     transform: translateX(-50%) scale(0.74);
   }
 
