@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Letter kept in light</title>
+  <desc id="desc">A sealed letter illustration with teal and warm cinematic light.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071117"/>
+      <stop offset=".54" stop-color="#184650"/>
+      <stop offset="1" stop-color="#f0c37b"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#dfd2b8"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#081015" flood-opacity=".35"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 .13"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="900" height="900" fill="url(#sky)"/>
+  <path d="M0 210 C210 118 330 214 462 170 C618 116 724 108 900 188 L900 0 L0 0 Z" fill="#89f1e7" opacity=".16"/>
+  <g filter="url(#softShadow)">
+    <rect x="178" y="286" width="544" height="328" rx="22" fill="url(#paper)"/>
+    <path d="M178 292 L450 494 L722 292" fill="none" stroke="#9d8668" stroke-opacity=".38" stroke-width="6"/>
+    <path d="M178 614 L382 444" fill="none" stroke="#9d8668" stroke-opacity=".22" stroke-width="5"/>
+    <path d="M722 614 L518 444" fill="none" stroke="#9d8668" stroke-opacity=".22" stroke-width="5"/>
+    <circle cx="450" cy="492" r="54" fill="#94313d"/>
+    <circle cx="434" cy="474" r="16" fill="#fff4e0" opacity=".2"/>
+    <text x="450" y="505" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#ffe8d6">NS</text>
+  </g>
+  <path d="M112 710 C276 648 416 742 560 692 C656 658 736 652 810 690" fill="none" stroke="#fffaf0" stroke-opacity=".28" stroke-width="3"/>
+  <rect width="900" height="900" filter="url(#grain)" opacity=".7"/>
+</svg>

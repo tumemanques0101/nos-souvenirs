@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Aqua memory light</title>
+  <desc id="desc">A soft teal memory scene with paper texture and quiet light.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123542"/>
+      <stop offset=".48" stop-color="#6adfd0"/>
+      <stop offset="1" stop-color="#f4d09a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="58%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".75"/>
+      <stop offset=".45" stop-color="#c9fff7" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0d1c23" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 .16"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <rect width="900" height="900" fill="url(#glow)"/>
+  <path d="M116 680 C238 590 338 592 456 674 C568 754 695 748 796 660" fill="none" stroke="#fff9eb" stroke-opacity=".46" stroke-width="4"/>
+  <path d="M176 252 C318 160 520 144 708 238" fill="none" stroke="#fff" stroke-opacity=".26" stroke-width="2"/>
+  <g opacity=".5">
+    <circle cx="252" cy="310" r="5" fill="#fffaf0"/>
+    <circle cx="646" cy="402" r="4" fill="#fffaf0"/>
+    <circle cx="542" cy="224" r="3" fill="#fffaf0"/>
+    <circle cx="352" cy="558" r="3" fill="#fffaf0"/>
+    <circle cx="742" cy="562" r="5" fill="#fffaf0"/>
+  </g>
+  <rect x="130" y="118" width="640" height="640" rx="28" fill="#fffaf0" opacity=".1" stroke="#fffaf0" stroke-opacity=".22"/>
+  <rect width="900" height="900" filter="url(#grain)" opacity=".6"/>
+</svg>

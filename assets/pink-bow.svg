@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" role="img" aria-labelledby="title desc">
+  <title id="title">Soft pink ribbon bow</title>
+  <desc id="desc">A large hand-drawn pink bow with two loops and long ribbon tails.</desc>
+  <defs>
+    <linearGradient id="loop" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#ffd4e3"/>
+      <stop offset="0.42" stop-color="#f89cbd"/>
+      <stop offset="1" stop-color="#e25f8d"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#ffbfda"/>
+      <stop offset="0.5" stop-color="#f57eab"/>
+      <stop offset="1" stop-color="#dc5c8c"/>
+    </linearGradient>
+    <linearGradient id="knot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9e8"/>
+      <stop offset="0.48" stop-color="#f596b9"/>
+      <stop offset="1" stop-color="#d85e8b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="7" flood-color="#8d3457" flood-opacity="0.26"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)" stroke="#bc5077" stroke-width="6" stroke-linejoin="round">
+    <path fill="url(#tail)" d="M313 253C266 286 221 343 160 429l-38-11-21 34 120 12c48-75 82-142 108-194z"/>
+    <path transform="translate(640 0) scale(-1 1)" fill="url(#tail)" d="M313 253C266 286 221 343 160 429l-38-11-21 34 120 12c48-75 82-142 108-194z"/>
+
+    <path fill="url(#loop)" d="M300 213C250 158 158 78 91 72 39 67 48 146 45 201c-4 69 18 113 76 116 64 4 128-28 180-67z"/>
+    <path transform="translate(640 0) scale(-1 1)" fill="url(#loop)" d="M300 213C250 158 158 78 91 72 39 67 48 146 45 201c-4 69 18 113 76 116 64 4 128-28 180-67z"/>
+
+    <path fill="none" stroke="#ce638a" stroke-width="12" stroke-linecap="round" opacity="0.48" d="M286 241C219 211 143 223 72 267"/>
+    <path transform="translate(640 0) scale(-1 1)" fill="none" stroke="#ce638a" stroke-width="12" stroke-linecap="round" opacity="0.48" d="M286 241C219 211 143 223 72 267"/>
+
+    <path fill="none" stroke="#fff0f6" stroke-width="13" stroke-linecap="round" opacity="0.52" d="M112 111c55 15 111 58 155 98"/>
+    <path transform="translate(640 0) scale(-1 1)" fill="none" stroke="#fff0f6" stroke-width="13" stroke-linecap="round" opacity="0.52" d="M112 111c55 15 111 58 155 98"/>
+
+    <path fill="none" stroke="#ef8eb2" stroke-width="12" stroke-linecap="round" opacity="0.46" d="M293 290c-31 36-53 83-76 124"/>
+    <path transform="translate(640 0) scale(-1 1)" fill="none" stroke="#ef8eb2" stroke-width="12" stroke-linecap="round" opacity="0.46" d="M293 290c-31 36-53 83-76 124"/>
+
+    <rect x="278" y="190" width="84" height="80" rx="27" fill="url(#knot)"/>
+    <path fill="none" stroke="#ffe8f1" stroke-width="10" stroke-linecap="round" opacity="0.56" d="M299 211c18-9 36-9 55 0"/>
+  </g>
+</svg>

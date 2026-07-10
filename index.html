@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Une Lettre - a private letter experience." />
+    <title>Une Lettre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#letterContent">Skip to letter</a>
+
+    <main class="experience" aria-live="polite">
+      <div class="ambient" aria-hidden="true">
+        <span class="blob blob-one"></span>
+        <span class="blob blob-two"></span>
+        <span class="leaf leaf-one"></span>
+        <span class="leaf leaf-two"></span>
+        <span class="star star-one"></span>
+        <span class="star star-two"></span>
+        <span class="dust dust-one"></span>
+        <span class="dust dust-two"></span>
+        <span class="dust dust-three"></span>
+      </div>
+
+      <aside class="open-clock" id="openClock" aria-label="Letter opening time">
+        <span>Opening time</span>
+        <strong id="clockValue">00:00:00</strong>
+        <small id="clockDate">Demo</small>
+      </aside>
+
+      <section class="lock-screen" id="lockScreen" aria-labelledby="lockTitle">
+        <p class="eyebrow">Une Lettre</p>
+        <h1 id="lockTitle">You have received a letter.</h1>
+
+        <div class="envelope-stage" id="envelopeStage" aria-hidden="true">
+          <div class="envelope" id="envelope">
+            <div class="envelope-shadow"></div>
+            <div class="envelope-lining"></div>
+            <div class="letter-preview">
+              <span class="letter-preview-kicker">Pour toi</span>
+              <span class="letter-preview-line line-one"></span>
+              <span class="letter-preview-line line-two"></span>
+              <span class="letter-preview-line line-three"></span>
+            </div>
+            <div class="envelope-back"></div>
+            <div class="envelope-body">
+              <div class="paper-grain"></div>
+              <div class="envelope-address" aria-hidden="true">
+                <span>For</span>
+                <strong>You</strong>
+              </div>
+              <span class="envelope-stamp" aria-hidden="true">UL</span>
+            </div>
+            <div class="envelope-left"></div>
+            <div class="envelope-right"></div>
+            <div class="envelope-flap">
+              <span class="flap-lining"></span>
+              <span class="flap-stitch"></span>
+            </div>
+            <div class="ribbon ribbon-horizontal"></div>
+            <div class="ribbon ribbon-vertical"></div>
+            <div class="bow" aria-hidden="true">
+              <span class="bow-loop bow-left"></span>
+              <span class="bow-knot"></span>
+              <span class="bow-loop bow-right"></span>
+              <span class="bow-tail bow-tail-left"></span>
+              <span class="bow-tail bow-tail-right"></span>
+            </div>
+            <div class="wax-seal wax-bow" id="waxSeal" aria-hidden="true">
+              <img class="wax-bow-art" src="assets/pink-bow.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <p class="lock-note" id="lockNote">This letter is waiting for you.</p>
+
+        <button class="primary-button open-request" id="openRequest" type="button">Open</button>
+
+        <form class="unlock-form" id="unlockForm" novalidate hidden aria-hidden="true">
+          <div class="password-topline">
+            <button class="hint-button" id="hintButton" type="button">Hint</button>
+            <span class="hint-popover" id="hintPopover" role="status">The password is the name of this letter, without spaces.</span>
+          </div>
+          <label for="passwordInput">Password</label>
+          <div class="unlock-row">
+            <input
+              id="passwordInput"
+              name="password"
+              type="password"
+              autocomplete="off"
+              placeholder="Enter password"
+              aria-describedby="passwordError"
+              required
+            />
+            <button class="primary-button" type="submit">Unlock</button>
+          </div>
+          <p class="error-message" id="passwordError" role="status"></p>
+        </form>
+      </section>
+
+      <section class="letter-screen" id="letterScreen" hidden aria-labelledby="letterTitle">
+        <article class="letter-paper" id="letterPaper">
+          <div class="letter-stickers" aria-hidden="true">
+            <span class="sticker sticker-heart"></span>
+            <span class="sticker sticker-star"></span>
+            <span class="sticker sticker-leaf"></span>
+            <span class="tape tape-one"></span>
+            <span class="tape tape-two"></span>
+          </div>
+
+          <header class="letter-header">
+            <p class="eyebrow">Une Lettre</p>
+            <h2 id="letterTitle">For you</h2>
+          </header>
+
+          <div class="letter-content" id="letterContent" tabindex="-1"></div>
+
+          <footer class="letter-footer" id="letterFooter" hidden>
+            <p>Thank you for reading.</p>
+            <button class="secondary-button" id="openMemoriesButton" type="button" disabled>Next</button>
+            <div class="tiny-heart" aria-hidden="true"></div>
+          </footer>
+        </article>
+      </section>
+
+      <section class="gallery-screen" id="galleryScreen" hidden aria-labelledby="galleryTitle">
+        <div class="memory-album">
+          <button class="gallery-back-button" id="backToLetterButton" type="button" aria-label="Back to letter" data-tooltip="Back to letter">&#8592;</button>
+          <header class="memory-album-header">
+            <p class="eyebrow">Nos Souvenirs</p>
+            <h2 id="galleryTitle">Little memories</h2>
+          </header>
+          <div class="memory-grid" id="memoryGrid" aria-live="polite"></div>
+          <div class="memory-navigation" aria-label="Memory navigation">
+            <button class="memory-nav-button" id="previousMemoryButton" type="button" aria-label="Previous memory" data-tooltip="Previous memory">&#8592;</button>
+            <span class="memory-progress" id="memoryProgress">1 / 30</span>
+            <button class="memory-nav-button" id="nextMemoryButton" type="button" aria-label="Next memory" data-tooltip="Next memory">&#8594;</button>
+          </div>
+          <button class="secondary-button" id="finishGalleryButton" type="button" hidden>Go to a wish</button>
+        </div>
+      </section>
+
+      <section class="ending-screen" id="endingScreen" hidden aria-labelledby="endingTitle">
+        <article class="ending-card">
+          <p class="eyebrow">Une Lettre</p>
+          <h2 id="endingTitle">The letter stays with you.</h2>
+          <p>
+            Some things are quiet because they are small. Some things are quiet
+            because they matter.
+          </p>
+          <small>Tap anywhere to fold this letter away.</small>
+        </article>
+      </section>
+
+      <section class="closing-screen" id="closingScreen" hidden aria-live="polite">
+        <div class="closing-stage">
+          <div class="closing-envelope-scene" id="closingEnvelope" aria-hidden="true">
+            <div class="closing-paper">
+              <span class="closing-paper-kicker">Pour toi</span>
+              <span class="closing-paper-line closing-paper-line-one"></span>
+              <span class="closing-paper-line closing-paper-line-two"></span>
+              <span class="closing-paper-line closing-paper-line-three"></span>
+            </div>
+            <div class="closing-envelope-shell">
+              <div class="closing-envelope-back"></div>
+              <div class="closing-envelope-body"></div>
+              <div class="closing-envelope-flap"><span class="closing-flap-lining"></span></div>
+              <div class="closing-ribbon closing-ribbon-horizontal"></div>
+              <div class="closing-ribbon closing-ribbon-vertical"></div>
+              <div class="closing-bow">
+                <img class="closing-bow-art" src="assets/pink-bow.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <h2 id="thanksMessage">Thank you for reading.</h2>
+        </div>
+      </section>
+    </main>
+
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Memory preview">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close memory">&times;</button>
+      <figure>
+        <img id="lightboxImage" alt="" />
+        <figcaption id="lightboxTitle"></figcaption>
+      </figure>
+    </div>
+
+    <script src="js/typewriter.js" defer></script>
+    <script src="js/animation.js" defer></script>
+    <script src="js/intro.js" defer></script>
+    <script src="js/password.js" defer></script>
+    <script src="js/envelope.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+    <script src="js/ending.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
