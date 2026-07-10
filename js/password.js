@@ -72,18 +72,30 @@
         const allowed = settings.passcodes.map(normalizePasscode);
 
         if (settings.enforceOpenTime && Date.now() < openTargetTime) {
-          showPasswordError("This letter is not ready to open yet.");
+          showPasswordError("Có những điều chỉ nên được đọc vào đúng thời điểm.");
           return;
         }
 
         if (!allowed.includes(value)) {
-          showPasswordError("That password does not open this letter.");
-          elements.passwordInput.select();
-          return;
-        }
+  const messages = [
+    "Có lẽ một giai điệu quen thuộc sẽ giúp em nhớ ra.",
+    "Đáp án vẫn luôn ở nơi em từng đặt nó.",
+    "Hãy thử nhớ lại ngày chúng ta bắt đầu.",
+    "Có lẽ em vẫn chưa nhớ đến kỷ niệm này.",
+    "Đôi khi một bài hát sẽ nói thay tất cả.",
+    "Bài hát ấy vẫn đang chờ được cất lên một lần nữa."
+  ];
+
+  showPasswordError(
+    messages[Math.floor(Math.random() * messages.length)]
+  );
+
+  elements.passwordInput.select();
+  return;
+}
 
         clearPasswordError();
-        elements.unlockForm.classList.add("is-unlocking");
+        elements.unlockForm.classList.add("Có lẽ một giai điệu quen thuộc sẽ giúp em nhớ ra");
         window.setTimeout(() => {
           elements.passwordInput.value = "";
           onUnlock();
