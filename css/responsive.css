@@ -63,6 +63,10 @@
     top: -3px;
   }
 
+  .envelope-address {
+    top: 65px;
+  }
+
   .envelope-stamp {
     display: none;
   }
@@ -237,6 +241,10 @@
 
   .wax-seal.wax-bow {
     top: -15px;
+  }
+
+  .envelope-address {
+    top: 53px;
   }
 
   .countdown-grid span {
