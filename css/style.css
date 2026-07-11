@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "UTM Beautiful Caps";
+    src: url("UTM-Beautiful-Caps.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 :root {
   --ink: #25272d;
   --muted: #69707a;
