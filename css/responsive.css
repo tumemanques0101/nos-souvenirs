@@ -56,8 +56,11 @@
   }
 
   .wax-seal {
-    top: 50px;
     transform: translateX(-50%) scale(0.86);
+  }
+
+  .wax-seal.wax-bow {
+    top: -3px;
   }
 
   .envelope-stamp {
@@ -229,8 +232,11 @@
   }
 
   .wax-seal {
-    top: 38px;
     transform: translateX(-50%) scale(0.74);
+  }
+
+  .wax-seal.wax-bow {
+    top: -15px;
   }
 
   .countdown-grid span {
